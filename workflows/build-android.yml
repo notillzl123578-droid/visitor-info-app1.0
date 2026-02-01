@@ -36,7 +36,7 @@ jobs:
         pip install buildozer cython==0.29.33
     
     - name: Build APK with Buildozer
-      working-directory: ./python-mobile-app
+      working-directory: ./
       run: |
         buildozer android debug
     
@@ -56,4 +56,5 @@ jobs:
         draft: false
         prerelease: false
       env:
+
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
